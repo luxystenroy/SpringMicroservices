@@ -33,7 +33,7 @@ public class GreetingController {
         Greeting greeting = new Greeting(String.format(TEMPLATE, name));
         greeting.add(linkTo(methodOn(GreetingController.class).greeting(name)).withSelfRel());
         
-        logger.info("bootrest.customproperty "+
+        logger.info("bootrest.customproperty -> "+
         		env.getProperty("bootrest.customproperty"));
 
         return new ResponseEntity<Greeting>(greeting, HttpStatus.OK);
